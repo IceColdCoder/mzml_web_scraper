@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mzml_web_scraper
 {
-    class Program
+    class Main
     {
         static void Main(string[] args)
         {
