@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace mzml_web_scraper
 {
-    interface Logger
+    interface Logger : IDisposable
     {
         /// <summary>
         /// Method where logs are to be written. Explicit because of queuing and database logging systems I intend for the future.
@@ -20,10 +20,5 @@ namespace mzml_web_scraper
         /// Force flush the logger.
         /// </summary>
         void Flush();
-
-        /// <summary>
-        /// Force close the logger.
-        /// </summary>
-        void Close();
     }
 }

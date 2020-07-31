@@ -3,13 +3,14 @@ using mzml_web_scraper;
 using System.IO;
 using System;
 using System.Linq;
+using NUnit.Framework.Internal;
 
 namespace mzml_web_scraper_nunit_tests
 {
     public class Log_Test
     {
-        static string target_path = Directory.GetCurrentDirectory() + "..\\http_logs\\";
-        static string target_name = "\\HTTPLog.txt";
+        string target_path = Directory.GetCurrentDirectory() + "\\logs\\http_logs";
+        string target_name = "\\HTTPLog.txt";
         static readonly string test_txt = "NUnit write log test.";
 
         [SetUp]
@@ -17,6 +18,15 @@ namespace mzml_web_scraper_nunit_tests
         {
             Log.Add_Logger(Log.Log_Type.File_Logger);
         }
+
+        [TearDown]
+        public void Dispose()
+        {
+            Log.ClearAllLoggers();
+            GC.Collect();
+            System.Threading.Thread.Sleep(100);
+        }
+
 
         [Test]
         public void Test1()
@@ -37,15 +47,9 @@ namespace mzml_web_scraper_nunit_tests
         public void Test2()
         {
             Log.Write(test_txt);
-            Log.CloseAll();
+            Log.ClearAllLoggers();
 
-            string[] lines = null;
-            for (int i = 0; i < 5; i++)
-            {
-                try{lines = File.ReadAllLines(target_path + target_name);}
-                catch { System.Threading.Thread.Sleep(100 + 100*i); }
-            }
-            
+            string[] lines = File.ReadAllLines(target_path + target_name);
 
             if(lines.Length == 0)
             {

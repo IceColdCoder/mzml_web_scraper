@@ -22,6 +22,16 @@ namespace mzml_web_scraper
 
         static Log(){}
 
+        public static void ClearAllLoggers()
+        {
+            foreach (Logger logger in logger_list)
+            {
+                logger.Dispose();
+            }
+            logger_list.Clear();
+        }
+
+
         /// <summary>
         /// Add a new logging system. Logging systems can be used concurrently.
         /// </summary>
@@ -90,32 +100,6 @@ namespace mzml_web_scraper
                 if(logger.GetType().Equals(Get_Type(log_type)))
                 {
                     logger.Flush();
-                }
-            }
-        }
-
-        /// <summary>
-        /// Force close all loggers.
-        /// </summary>
-        public static void CloseAll()
-        {
-            foreach (Logger logger in logger_list)
-            {
-                logger.Close();
-            }
-        }
-
-        /// <summary>
-        /// Force close all loggers of a specific type.
-        /// </summary>
-        /// <param name="log_type"></param>
-        public static void Close(Log_Type log_type)
-        {
-            foreach (Logger logger in logger_list)
-            {
-                if (logger.GetType().Equals(Get_Type(log_type)))
-                {
-                    logger.Close();
                 }
             }
         }

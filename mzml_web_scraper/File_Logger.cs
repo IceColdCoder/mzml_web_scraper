@@ -15,6 +15,7 @@ namespace mzml_web_scraper
     {
 
         private StreamWriter writer = null;
+        private bool disposedValue;
 
         public File_Logger()
         {
@@ -26,11 +27,6 @@ namespace mzml_web_scraper
                 Directory.CreateDirectory(target_path);
                 //System.Diagnostics.Debug.WriteLine("Path Exists!");
             }
-
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
-            GC.Collect();
-            GC.WaitForPendingFinalizers();
 
             if (File.Exists(target_path + target_name))
             {
@@ -59,15 +55,22 @@ namespace mzml_web_scraper
             writer.Flush();
         }
 
-        public void Close()
+        public void Dispose()
         {
-            writer.Flush();
-            writer.Close();
-        }
-
-        ~File_Logger()
-        {
-            Close();
+            bool disposed = false;
+            while(disposed == false)
+            {
+                try
+                {
+                    writer.Dispose();
+                    disposed = true;
+                }
+                catch ( Exception e)
+                {
+                    System.Diagnostics.Debug.WriteLine(e.Message);
+                }
+            }
+            
         }
     }
 }
