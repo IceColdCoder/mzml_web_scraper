@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "mzml_web_scraper_nunit_tests": {
+      "commandName": "Executable"
+    }
+  }
+}

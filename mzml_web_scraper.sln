@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1145
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mzml_web_scraper", "mzml_web_scraper\mzml_web_scraper.csproj", "{5B839371-DE2B-438D-9838-8DC535CD9BD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mzml_web_scraper_nunit_tests", "nunit_tests\mzml_web_scraper_nunit_tests\mzml_web_scraper_nunit_tests.csproj", "{809B0C71-6CDA-42A6-BFAF-FFD6F2507A2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5B839371-DE2B-438D-9838-8DC535CD9BD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B839371-DE2B-438D-9838-8DC535CD9BD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B839371-DE2B-438D-9838-8DC535CD9BD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{809B0C71-6CDA-42A6-BFAF-FFD6F2507A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{809B0C71-6CDA-42A6-BFAF-FFD6F2507A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{809B0C71-6CDA-42A6-BFAF-FFD6F2507A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{809B0C71-6CDA-42A6-BFAF-FFD6F2507A2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
