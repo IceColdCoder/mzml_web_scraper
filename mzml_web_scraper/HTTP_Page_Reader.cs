@@ -6,17 +6,25 @@ using System.Threading.Tasks;
 using System.Net.Http;
 using System.Diagnostics;
 using System.Threading;
+using System.Collections.Concurrent;
 
 namespace mzml_web_scraper
 {
     class HTTP_Page_Reader
     {
-        
 
-        public HTTP_Page_Reader(HttpClient web_client, int num_connections)
+        public static ConcurrentQueue<string> outgoing_url;
+        public static ConcurrentQueue<string> incomming_http;
+
+        private static readonly HttpClient http_client = null;
+        static HTTP_Page_Reader()
         {
-
+            http_client = new HttpClient();
+            outgoing_url = new ConcurrentQueue<string>();
+            incomming_http = new ConcurrentQueue<string>();
         }
+
+
 
     }
 }

@@ -57,17 +57,21 @@ namespace mzml_web_scraper
 
         public void Dispose()
         {
-            bool disposed = false;
-            while(disposed == false)
+            int disposed = 0;
+            while(disposed < 5)
             {
                 try
                 {
                     writer.Dispose();
-                    disposed = true;
+                    disposed = 5;
                 }
                 catch ( Exception e)
                 {
                     System.Diagnostics.Debug.WriteLine(e.Message);
+                }
+                finally
+                {
+                    disposed++;
                 }
             }
             
