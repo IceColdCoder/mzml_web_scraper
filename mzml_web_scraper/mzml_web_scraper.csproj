@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="File_Logger.cs" />
     <Compile Include="HTTP_Page_Reader.cs" />
-    <Compile Include="HTTP_Parser.cs" />
+    <Compile Include="HTML_Parser.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="MZML_Web_Scraper.cs" />
@@ -53,6 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="html_spec.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
