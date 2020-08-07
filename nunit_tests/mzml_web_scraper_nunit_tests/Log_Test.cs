@@ -47,11 +47,11 @@ namespace mzml_web_scraper_nunit_tests
         public void Test2()
         {
             Log.Write(test_txt);
-            Log.ClearAllLoggers();
+            this.Dispose();
 
             string[] lines = File.ReadAllLines(target_path + target_name);
 
-            if(lines.Length == 0)
+            if (lines.Length == 0)
             {
                 Assert.Fail("Log_Test:Test2: File had no text.");
             }

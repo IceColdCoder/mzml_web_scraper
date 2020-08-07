@@ -14,7 +14,7 @@ namespace mzml_web_scraper_nunit_tests
         [SetUp]
         public void setup()
         {
-
+            
         }
 
         [TearDown]
@@ -26,7 +26,7 @@ namespace mzml_web_scraper_nunit_tests
         [Test]
         public void Test1()
         {
-
+            HTML_Parser.Parse_HTML("");
         }
     }
 
