@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Http;
+using System.Diagnostics;
+using System.IO;
 
 namespace mzml_web_scraper
 {
@@ -12,7 +14,7 @@ namespace mzml_web_scraper
         public static readonly HttpClient web_client = new HttpClient();
         static void Main(string[] args)
         {
-
+            Debug.WriteLine(Directory.GetCurrentDirectory());
         }
 
         public MZML_Web_Scraper()

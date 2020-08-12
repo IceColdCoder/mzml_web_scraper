@@ -16,4 +16,22 @@
     <ProjectReference Include="..\..\mzml_web_scraper\mzml_web_scraper.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="test_resources\HTML5_Test_Page\HTML5 Test Page.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="test_resources\HTML5_Test_Page\HTML5 Test Page_files\420.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="test_resources\HTML5_Test_Page\HTML5 Test Page_files\480.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="test_resources\HTML5_Test_Page\HTML5 Test Page_files\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="test_resources\HTML5_Test_Page\HTML5 Test Page_files\index_data\a.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

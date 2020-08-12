@@ -10,7 +10,7 @@ using System.Collections.Concurrent;
 
 namespace mzml_web_scraper
 {
-    class HTTP_Page_Reader
+    public static class HTTP_Page_Reader
     {
 
         public static ConcurrentQueue<string> outgoing_url;
@@ -24,7 +24,23 @@ namespace mzml_web_scraper
             incomming_http = new ConcurrentQueue<string>();
         }
 
+        public static async Task<string> HTTP_GET_String(HttpRequestMessage msg, TimeSpan timeout)
+        {
+            string page_data = null;
 
-
+            try
+            {
+                var cts = new CancellationTokenSource(timeout);
+                HttpResponseMessage response = await http_client.SendAsync(msg);
+                response.EnsureSuccessStatusCode();
+                page_data = await response.Content.ReadAsStringAsync();
+            } catch (HttpRequestException e)
+            {
+                Log.Write(e.Source + " " + e.Message);
+                throw e;
+            }
+            finally { }
+            return page_data;
+        }
     }
 }
