@@ -8,7 +8,7 @@ using NUnit.Framework.Internal;
 
 namespace mzml_web_scraper_nunit_tests
 {
-
+    [TestFixture]
     public class HTML_Parser_Test
     {
         [SetUp]

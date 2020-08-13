@@ -7,6 +7,7 @@ using NUnit.Framework.Internal;
 
 namespace mzml_web_scraper_nunit_tests
 {
+    [TestFixture]
     public class Log_Test
     {
         string target_path = Directory.GetCurrentDirectory() + "\\logs\\http_logs";

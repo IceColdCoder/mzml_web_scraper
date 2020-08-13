@@ -14,7 +14,7 @@ namespace mzml_web_scraper
 {
     /// <summary>
     /// Static utility class for reading data from web pages. Provides methods to request data and handle exceptions from web access.
-    /// Default timeout is 30 seconds.
+    /// Default timeout is 15 seconds.
     /// </summary>
     public static class HTTP_Page_Reader
     {
@@ -23,7 +23,7 @@ namespace mzml_web_scraper
         static HTTP_Page_Reader()
         {
             http_client = new HttpClient();
-            http_client.Timeout = TimeSpan.FromSeconds(30);
+            http_client.Timeout = TimeSpan.FromSeconds(15);
         }
 
         /// <summary>
