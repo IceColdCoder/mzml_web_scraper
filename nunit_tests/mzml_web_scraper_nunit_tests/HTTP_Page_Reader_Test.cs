@@ -30,8 +30,7 @@ namespace mzml_web_scraper_nunit_tests
         [Test]
         public void Test1()
         {
-            HttpRequestMessage msg = new HttpRequestMessage(HttpMethod.Get, url);
-            var GET_Task = mzml_web_scraper.HTTP_Page_Reader.HTTP_GET_String(msg, TimeSpan.FromMilliseconds(1000));
+            var GET_Task = mzml_web_scraper.HTTP_Page_Reader.HTTP_GET_String(url, TimeSpan.FromMilliseconds(1000));
             Assert.DoesNotThrow( delegate{ string page = GET_Task.Result;} );
         }
     }

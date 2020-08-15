@@ -15,7 +15,6 @@ namespace mzml_web_scraper
     {
 
         private StreamWriter writer = null;
-        private bool disposedValue;
 
         public File_Logger()
         {

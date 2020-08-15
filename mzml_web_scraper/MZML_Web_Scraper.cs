@@ -11,31 +11,26 @@ namespace mzml_web_scraper
 {
     class MZML_Web_Scraper
     {
-        public static readonly HttpClient web_client = new HttpClient();
+        
         static void Main(string[] args)
         {
             Debug.WriteLine(Directory.GetCurrentDirectory());
+
+            MZML_Web_Scraper scraper = new MZML_Web_Scraper();
         }
 
         public MZML_Web_Scraper()
         {
+            Log.Add_Logger(Log.Log_Type.File_Logger);
+            Log.Write("Program Start");
+
+            
+
+            string page = HTTP_Page_Reader.HTTP_GET_String("http://www.google.com", TimeSpan.FromSeconds(15)).Result;
+            HTML_Parser.Parse_HTML(page);
 
         }
 
-        static async Task Scrape_URL(string url)
-        {
-            try
-            {
-                HttpResponseMessage response = await web_client.GetAsync(url);
-                response.EnsureSuccessStatusCode();
-                string responseBody = await response.Content.ReadAsStringAsync();
-            }
-            catch (HttpRequestException e)
-            {
-                Console.WriteLine("\nException Caught!");
-                Console.WriteLine("Message :{0} ", e.Message);
-            }
 
-        }
     }
 }

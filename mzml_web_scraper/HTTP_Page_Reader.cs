@@ -42,8 +42,9 @@ namespace mzml_web_scraper
         /// <param name="msg"></param>
         /// <param name="timeout"></param>
         /// <returns></returns>
-        public static async Task<string> HTTP_GET_String(HttpRequestMessage msg, TimeSpan timeout)
+        public static async Task<string> HTTP_GET_String(string url, TimeSpan timeout)
         {
+            HttpRequestMessage msg = new HttpRequestMessage(HttpMethod.Get, url);
             var cts = new CancellationTokenSource(timeout);
             try
             {
