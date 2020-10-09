@@ -31,11 +31,8 @@ namespace mzml_web_scraper
             {
                 string line = "";
 
-                string html_pattern = @"<.*?\s??.*?>";
+                string html_pattern = @"^(<(?'Tag'([^<>]*))>)?";
                 Regex html_regex = new Regex(html_pattern, RegexOptions.IgnoreCase | RegexOptions.Compiled);
-
-                string tag_pattern = @"<.*?>";
-                Regex tag_regex = new Regex(tag_pattern, RegexOptions.IgnoreCase | RegexOptions.Compiled);
 
                 while ((line = file.ReadLine()) != null)
                 {
@@ -43,36 +40,24 @@ namespace mzml_web_scraper
                     if (line.Length > 1)
                     {
                         Match match = html_regex.Match(line);
-
-                        //Case for <...> </...> IE normal Tags.
-                        if (tag_regex.IsMatch(match.Value))
-                        {
-                            string html_opener = match.Value;
-                            string html_closer = match.Value.Insert(1, "/");
-
-                            html_spec.Add(html_opener, html_closer);
-                            html_spec.Add(html_closer, html_opener);
-                        }
-
-                        //Case for <! ... >
-                        else
-                        {
-
-                        }
-
-
-
+                        html_spec.Add(match.Groups[match.Groups.Count - 1].Value, line);
                     }
-
                 }
-
-
             }
 
-            foreach(DictionaryEntry tmp in html_spec)
+            Debug.WriteLine(HTML_Spec_ToString());
+        }
+
+        public static string HTML_Spec_ToString()
+        {
+            StringBuilder sb = new StringBuilder("[");
+            IDictionaryEnumerator _e = html_spec.GetEnumerator();
+            while(_e.MoveNext())
             {
-                Debug.WriteLine(tmp.Key + ", " + tmp.Value);
+                sb.Append("(" + _e.Key + "," + _e.Value + "),");
             }
+            sb[sb.Length - 1] = ']';
+            return sb.ToString();
         }
 
         public static void Parse_HTML(string html)
