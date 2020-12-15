@@ -33,6 +33,7 @@ namespace mzml_web_scraper
             }
 
             writer = new StreamWriter(new FileStream(target_path + target_name, FileMode.Create));
+            writer.AutoFlush = true;
         }
 
         /// <summary>
@@ -40,10 +41,9 @@ namespace mzml_web_scraper
         /// Intended for debugging only.
         /// </summary>
         /// <param name="txt"></param>
-        public async void Log(string txt)
+        public void Log(string txt)
         {
-            await writer.WriteLineAsync(txt);
-            await writer.FlushAsync();
+            writer.WriteLine(txt);
         }
 
         /// <summary>

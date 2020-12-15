@@ -79,6 +79,16 @@ namespace mzml_web_scraper
         }
 
         /// <summary>
+        /// Write Log message with date & time wrapper using C# standard date and time prefixed to log message.
+        /// </summary>
+        /// <param name="txt"></param>
+        public static void WriteTime(string txt)
+        {
+            string time = DateTime.Now.ToString();
+            Log.Write(time + " -> " + txt);
+        }
+
+        /// <summary>
         /// Force flush all log systems.
         /// </summary>
         public static void FlushAll()

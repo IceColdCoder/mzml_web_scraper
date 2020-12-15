@@ -44,6 +44,7 @@ namespace mzml_web_scraper
         /// <returns></returns>
         public static async Task<string> HTTP_GET_String(string url, TimeSpan timeout)
         {
+            Log.WriteTime("Executing HTTP GET request to: " + url);
             HttpRequestMessage msg = new HttpRequestMessage(HttpMethod.Get, url);
             var cts = new CancellationTokenSource(timeout);
             try
