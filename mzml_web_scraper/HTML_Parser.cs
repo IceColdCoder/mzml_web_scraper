@@ -14,11 +14,28 @@ using System.Text.RegularExpressions;
 
 namespace mzml_web_scraper
 {
+
+    public class HTMLDom
+    {
+
+        public class HTML_HEAD
+        {
+
+        }
+
+        public class HTML_BODY
+        {
+
+        }
+
+    }
     public static class HTML_Parser
     {
 
         static readonly string specfile = Directory.GetCurrentDirectory() + "\\specs\\html_spec.txt";
         static OrderedDictionary html_spec;
+
+
         static HTML_Parser()
         {
             html_spec = new OrderedDictionary();
@@ -60,17 +77,30 @@ namespace mzml_web_scraper
 
         public static void Parse_HTML(string html)
         {
-            string reader_pattern = @"^(<(?'Tag'([^<>]*))>)?";
+            HTMLDom Dom = new HTMLDom();
 
-            Regex reader = new Regex(reader_pattern, RegexOptions.IgnoreCase | RegexOptions.Compiled);
+            Stack<char> S = new Stack<char>(html.ToCharArray());
 
-            MatchCollection matches = reader.Matches(html);
-
-            foreach (Match m in matches)
+            ArrayList clist = new ArrayList();
+            while (S.Count() != 0)
             {
-                foreach (Capture capture in m.Captures)
+
+                //If the code finds what looks like an html statement it will iterate over it using a stack in order to
+                //ensure that is is a regular statement.
+                char c = S.Pop();
+                if (c.Equals('<'))
                 {
-                    Debug.WriteLine(capture.Index, capture.Value);
+                    clist.Clear();
+                    clist.Add(c);
+
+                    while(S.Count != 0 && !c.Equals('>'))
+                    {
+                        c = S.Pop();
+                        clist.Add(c);
+                    }
+
+                    //Now handle it using a regex expression.
+
                 }
             }
         }
