@@ -1,0 +1,7 @@
+﻿<ul>,</ul>,Defines an unordered list
+<ol>,</ol>,Defines an ordered list
+<li>,</li>,Defines a list item
+<dir>,</dir>,Not supported in HTML5. Use <ul> instead. Defines a directory list
+<dl>,</dl>,Defines a description list
+<dt>,</dt>,Defines a term/name in a description list
+<dd>,</dd>,Defines a description of a term/name in a description list

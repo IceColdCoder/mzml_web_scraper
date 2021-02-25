@@ -1,0 +1,39 @@
+﻿<acronym>,</acronym>,Not supported in HTML5. Use <abbr> instead. Defines an acronym
+<abbr>,</abbr>,Defines an abbreviation or an acronym
+<address>,</address>,Defines contact information for the author/owner of a document/article
+<b>,</b>,Defines bold text
+<bdi>,</bdi>,Isolates a part of text that might be formatted in a different direction from other text outside it
+<bdo>,</bdo>,Overrides the current text direction
+<big>,</big>,Not supported in HTML5. Use CSS instead. Defines big text
+<blockquote>,</blockquote>,Defines a section that is quoted from another source
+<center>,</center>,Not supported in HTML5. Use CSS instead. Defines centered text
+<cite>,</cite>,Defines the title of a work
+<code>,</code>,Defines a piece of computer code
+<del>,</del>,Defines text that has been deleted from a document
+<dfn>,</dfn>,Specifies a term that is going to be defined within the content
+<em>,</em>,Defines emphasized text 
+<font>,</font>,Not supported in HTML5. Use CSS instead. Defines font, color, and size for text
+<i>,</i>,Defines a part of text in an alternate voice or mood
+<ins>,</ins>,Defines a text that has been inserted into a document
+<kbd>,</kbd>,Defines keyboard input
+<mark>,</mark>,Defines marked/highlighted text
+<meter>,</meter>,Defines a scalar measurement within a known range (a gauge)
+<pre>,</pre>,Defines preformatted text
+<progress>,</progress>,Represents the progress of a task
+<q>,</q>,Defines a short quotation
+<rp>,</rp>,Defines what to show in browsers that do not support ruby annotations
+<rt>,</rt>,Defines an explanation/pronunciation of characters (for East Asian typography)
+<ruby>,</ruby>,Defines a ruby annotation (for East Asian typography)
+<s>,</s>,Defines text that is no longer correct
+<samp>,</samp>,Defines sample output from a computer program
+<small>,</small>,Defines smaller text
+<strike>,</strike>,Not supported in HTML5. Use <del> or <s> instead. Defines strikethrough text
+<strong>,</strong>,Defines important text
+<sub>,</sub>,Defines subscripted text
+<sup>,</sup>,Defines superscripted text
+<template>,</template>,Defines a container for content that should be hidden when the page loads
+<time>,</time>,Defines a specific time (or datetime)
+<tt>,</tt>,Not supported in HTML5. Use CSS instead. Defines teletype text
+<u>,</u>,Defines some text that is unarticulated and styled differently from normal text
+<var>,</var>,Defines a variable
+<wbr>,</wbr>,Defines a possible line-break

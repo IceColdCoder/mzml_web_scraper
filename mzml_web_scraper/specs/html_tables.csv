@@ -1,0 +1,10 @@
+﻿<table>,</table>,Defines a table
+<caption>,</caption>,Defines a table caption
+<th>,</th>,Defines a header cell in a table
+<tr>,</tr>,Defines a row in a table
+<td>,</td>,Defines a cell in a table
+<thead>,</thead>,Groups the header content in a table
+<tbody>,</tbody>,Groups the body content in a table
+<tfoot>,</tfoot>,Groups the footer content in a table
+<col>,,Specifies column properties for each column within a <colgroup> element
+<colgroup>,</colgroup>,Specifies a group of one or more columns in a table for formatting

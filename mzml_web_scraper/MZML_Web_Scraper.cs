@@ -27,10 +27,12 @@ namespace mzml_web_scraper
             
 
             string page = HTTP_Page_Reader.HTTP_GET_String("https://www.google.com/", TimeSpan.FromSeconds(15)).Result;
-            HTML_Parser.Parse_HTML(page);
+            string f_path = Environment.CurrentDirectory + "_DefaultDebug.html";
+            Debug.WriteLine("Writing HTML page to: " + f_path);
+            File.WriteAllText(f_path, page);
+/*            HTML_Parser.Parse_HTML(page);*/
 
         }
-
 
     }
 }

@@ -1,0 +1,4 @@
+﻿<head>,</head>,Defines information about the document
+<meta>,,Defines metadata about an HTML document
+<base>,,Specifies the base URL/target for all relative URLs in a document
+<basefont>,,Not supported in HTML5. Use CSS instead. Specifies a default color, size, and font for all text in a document

@@ -1,0 +1,15 @@
+﻿<!DOCTYPE>,,Defines the document type
+<html>,</html>,Defines an HTML document
+<head>,</head>,Contains metadata/information for the document
+<title>,</title>,Defines a title for the document
+<body>,</body>,Defines the document's body
+<h1>,</h1>,Defines HTML headings 1
+<h2>,</h2>,Defines HTML headings 2
+<h3>,</h3>,Defines HTML headings 3
+<h4>,</h4>,Defines HTML headings 4
+<h5>,</h5>,Defines HTML headings 5
+<h6>,</h6>,Defines HTML headings 6
+<p>,</p>,Defines a paragraph
+<br>,,Inserts a single line break
+<hr>,,Defines a thematic change in the content
+<!--,-->,Defines a comment

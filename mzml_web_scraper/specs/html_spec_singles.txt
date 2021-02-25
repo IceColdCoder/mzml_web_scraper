@@ -1,0 +1,9 @@
+﻿<!DOCTYPE html> Basically tells the browser what kind of document we're loading, in this case good 'ol HTML. This guy likes to be the first element in the document, even before the opening <html> tag. This page, for example, starts things off with <!DOCTYPE html>
+
+<br> Single line break. Think of br as short for break.
+
+<input> Input is used with various attributes to create form input elements.
+
+<img> For displaying images on a webpage. Example: <img src="image.png">
+
+<meta> Used for specifying various meta information about the document. Meta tags are used within the document <head>.

@@ -1,0 +1,8 @@
+﻿<img>,,Defines an image
+<map>,</map>,Defines a client-side image map
+<area>,,Defines an area inside an image map
+<canvas>,</canvas>,Used to draw graphics, on the fly, via scripting (usually JavaScript)
+<figcaption>,</figcaption>,Defines a caption for a <figure> element
+<figure>,</figure>,Specifies self-contained content
+<picture>,</picture>,Defines a container for multiple image resources
+<svg>,</svg>,Defines a container for SVG graphics

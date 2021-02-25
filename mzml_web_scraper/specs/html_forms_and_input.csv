@@ -1,0 +1,12 @@
+﻿<form>,</form>,Defines an HTML form for user input
+<input>,,Defines an input control
+<textarea>,</textarea>,Defines a multiline input control (text area)
+<button>,</button>,Defines a clickable button
+<select>,</select>,Defines a drop-down list
+<optgroup>,</optgroup>,Defines a group of related options in a drop-down list
+<option>,</option>,Defines an option in a drop-down list
+<label>,</label>,Defines a label for an <input> element
+<fieldset>,</fieldset>,Groups related elements in a formS
+<legend>,</legend>,Defines a caption for a <fieldset> element
+<datalist>,</datalist>,Specifies a list of pre-defined options for input controls
+<output>,</output>,Defines the result of a calculation

@@ -57,11 +57,29 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="specs\html_audio_video.csv" />
+    <None Include="specs\html_frames.csv" />
+    <None Include="specs\html_images.csv" />
+    <None Include="specs\html_links.csv" />
+    <None Include="specs\html_lists.csv" />
+    <None Include="specs\html_metainfo.csv" />
+    <None Include="specs\html_programming.csv" />
+    <None Include="specs\html_styles_semantics.csv" />
+    <None Include="specs\html_tables.csv" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="specs\html_spec.txt">
+    <Content Include="specs\html_spec_comments.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="specs\html_spec_singles.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="specs\html_spec_defaults.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="specs\html_forms_and_input.csv" />
+    <None Include="specs\html_formatting.csv" />
+    <None Include="specs\html_basic.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,3 @@
+﻿<!–- -–> For commenting out sections of HTML or placing comments within HTML. Anything between <!-- and --> wont be rendered as text when the page loads in a web browser, but will still be visible if looking at the plain 'ol HTML file in a text editor.
+
+/* */ For commenting out sections of HTML or placing comments within HTML. Anything between /* and */ wont be rendered as text when the page loads in a web browser, but will still be visible if looking at the plain 'ol HTML file in a text editor.

@@ -1,0 +1,13 @@
+﻿<style>,</style>,Defines style information for a document
+<div>,</div>,Defines a section in a document
+<span>,</span>,Defines a section in a document
+<header>,</header>,Defines a header for a document or section
+<footer>,</footer>,Defines a footer for a document or section
+<main>,</main>,Specifies the main content of a document
+<section>,</section>,Defines a section in a document
+<article>,</article>,Defines an article
+<aside>,</aside>,Defines content aside from the page content
+<details>,</details>,Defines additional details that the user can view or hide
+<dialog>,</dialog>,Defines a dialog box or window
+<summary>,</summary>,Defines a visible heading for a <details> element
+<data>,</data>,Adds a machine-readable translation of a given content
